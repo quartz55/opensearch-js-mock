@@ -19,7 +19,7 @@ const {
   ConnectionError,
   ResponseError,
   RequestAbortedError,
-  ElasticsearchClientError
+  OpensearchClientError
 } = errors
 
 class Mocker {
@@ -139,7 +139,7 @@ function buildConnectionClass (mocker) {
           if (payload instanceof ResponseError) {
             statusCode = payload.statusCode
             payload = payload.body
-          } else if (payload instanceof ElasticsearchClientError) {
+          } else if (payload instanceof OpensearchClientError) {
             return callback(payload, null)
           }
           stream = intoStream(
