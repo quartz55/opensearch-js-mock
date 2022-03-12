@@ -6,7 +6,7 @@
 
 const { gunzip, createGunzip } = require('zlib')
 const querystring = require('querystring')
-const { Connection, errors } = require('@opensearch/opensearch')
+const { Connection, errors } = require('@opensearch-project/opensearch')
 const Router = require('find-my-way')
 const intoStream = require('into-stream')
 const equal = require('fast-deep-equal')

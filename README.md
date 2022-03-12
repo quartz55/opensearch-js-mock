@@ -1,6 +1,6 @@
 <img align="right" width="auto" height="auto" src="https://www.elastic.co/static-res/images/elastic-logo-200.png">
 
-# Elasticsearch Node.js client mock utility
+# Opensearch Node.js client mock utility
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)  ![build](https://github.com/elastic/elasticsearch-js-mock/workflows/build/badge.svg)
 
