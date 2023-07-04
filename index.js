@@ -8,8 +8,8 @@ const { gunzip, createGunzip } = require('zlib')
 const querystring = require('querystring')
 const { Connection, errors } = require('@opensearch-project/opensearch')
 const Router = require('find-my-way')
-const intoStream = require('into-stream')
 const equal = require('fast-deep-equal')
+const { Readable } = require('stream')
 const kRouter = Symbol('elasticsearch-mock-router')
 
 /* istanbul ignore next */
@@ -101,6 +101,13 @@ class Mocker {
   getConnection () {
     return buildConnectionClass(this)
   }
+}
+
+const intoStream = (str) => {
+  const stream = new Readable()
+  stream.push(str)
+  stream.push(null)
+  return stream
 }
 
 function buildConnectionClass (mocker) {
